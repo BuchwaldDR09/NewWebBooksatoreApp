@@ -27,22 +27,20 @@ public class AuthorService {
        Authors.add(author1);
        Authors.add(author2);
        Authors.add(author3);       
-     
+
        
-       
-       
-       Authors.stream().map((a) -> {
-           SearchResults.add(a.getAuthorName());
-           return a;
-       }).map((a) -> {
-           SearchResults.add(String.valueOf(a.getAuthorId()));
-           return a;
-       }).forEach((a) -> {
-           SearchResults.add(String.valueOf(a.getDateAdded()));
+       //practice using maps
+       Authors.stream().map((au) -> { SearchResults.add(au.getAuthorName());
+           return au;
+       }).map((au) -> { SearchResults.add(String.valueOf(au.getAuthorId()));
+           return au;
+       }).forEach((au) -> { SearchResults.add(String.valueOf(au.getDateAdded()));
        });
                  
        return SearchResults;
         
+     
+       
        
     }
     

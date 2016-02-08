@@ -36,8 +36,8 @@ public class AuthorController extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        
         String outputPage = OUTPUTPAGE;
+        
         
         
         AuthorService authorService = new AuthorService();

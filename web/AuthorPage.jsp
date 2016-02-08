@@ -55,53 +55,27 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>
-                                <u>Author Name</u>
-                            </th>
-                            <th>
-                                <u>Author ID</u>
-                            </th>
-                            <th>
-                                <u>Time/Date Stamp</u>
-                            </th>
+                            <th><u>Author Name</u></th>
+                            <th><u>Author ID</u></th>
+                            <th><u>Time/Date Stamp</u></th>   
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>
-                                ${firstAuthorName}
-                            </td>
-                            <td>
-                                ${firstAuthorID}
-                            </td>
-                            <td>
-                                ${firstTimeStamp}
-                            </td>
+                            <td>${firstAuthorName}</td>
+                            <td>${firstAuthorID}</td>
+                            <td>${firstTimeStamp}</td>
                         </tr>
                         <tr>
-                            <td>
-                                ${secondAuthorName}
-                            </td>
-                            <td>
-                                ${secondAuthorID}
-                            </td>
-                            <td>
-                                ${secondTimeStamp}
-                            </td>
+                            <td>${secondAuthorName}</td>
+                            <td>${secondAuthorID}</td>
+                            <td>${secondTimeStamp}</td>
                         </tr>
                         <tr>
-                            <td>
-                                ${thirdAuthorName}
-                            </td>
-                            <td>
-                                ${thirdAuthorID}
-                            </td>
-                            <td>
-                                ${thirdTimeStamp}
-                            </td>
+                            <td>${thirdAuthorName}</td>
+                            <td>${thirdAuthorID}</td>
+                            <td>${thirdTimeStamp}</td>
                         </tr>
-                        
-                      
                     </tbody>
                 </table>
             </div>

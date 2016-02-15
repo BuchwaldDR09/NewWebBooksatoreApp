@@ -30,8 +30,8 @@ public class AuthorService {
     private void testData(){
         authors = new ArrayList<>(Arrays.asList
         (new Author(01, "Tom Clancey", LocalDateTime.now()), 
-                new Author(01, "Tom Clancey", LocalDateTime.now()), 
-                new Author(01, "Tom Clancey", LocalDateTime.now())));
+                new Author(01, "J.K. Rowling", LocalDateTime.now()), 
+                new Author(01, "J. R. R. Tolkien", LocalDateTime.now())));
     }
 
 

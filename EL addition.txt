@@ -1,0 +1,23 @@
+<c:forEach var="author" items="${SearchResults}">
+                                   <tr>
+                                       <td>
+                                           <c:out value="${author.authorId}" />
+                                       </td>
+                                       
+                                       <td>
+                                           <c:out value="${author.autherName}" />
+                                       </td>
+                                       
+                                       <td>
+                                           <c:out value="${author.dateAdded}" />
+                                       </td>
+                                   </tr>
+                        </c:forEach>
+                      
+                    </tbody>
+                </table>
+				
+				
+				**Doesn't work because items were not added to list properly.
+				
+				

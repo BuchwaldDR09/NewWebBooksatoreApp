@@ -6,6 +6,9 @@
 
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -61,21 +64,26 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>${firstAuthorName}</td>
-                            <td>${firstAuthorID}</td>
-                            <td>${firstTimeStamp}</td>
-                        </tr>
-                        <tr>
-                            <td>${secondAuthorName}</td>
-                            <td>${secondAuthorID}</td>
-                            <td>${secondTimeStamp}</td>
-                        </tr>
-                        <tr>
-                            <td>${thirdAuthorName}</td>
-                            <td>${thirdAuthorID}</td>
-                            <td>${thirdTimeStamp}</td>
-                        </tr>
+                       
+                        <c:forEach var="author" items="${authorsList}">
+                                   <tr>
+                                       <td>
+                                           <c:out value="${author.authorId}" />
+                                       </td>
+                                       
+                                       <td>
+                                           <c:out value="${author.authorName}" />
+                                       </td>
+                                       
+                                       <td>
+                                           <c:out value="${author.dateAdded}" />
+                                       </td>
+                                   </tr>
+                        </c:forEach>
+                      
+                    </tbody>
+                </table>
+                        
                     </tbody>
                 </table>
             </div>

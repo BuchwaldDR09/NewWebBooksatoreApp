@@ -6,6 +6,7 @@
 package controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -13,6 +14,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.Author;
 import model.AuthorService;
 
 /**
@@ -37,22 +39,14 @@ public class AuthorController extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         String outputPage = OUTPUTPAGE;
-        
-        
-        
+ 
         AuthorService authorService = new AuthorService();
         
-        request.setAttribute("firstAuthorName", authorService.getAuthors().get(0));
-        request.setAttribute("firstAuthorID", authorService.getAuthors().get(1));
-        request.setAttribute("firstTimeStamp", authorService.getAuthors().get(2));
+        List<Author> authors;
+        authors = authorService.getAllAuthors();
+        request.setAttribute("authorsList", authors);
         
-        request.setAttribute("secondAuthorName", authorService.getAuthors().get(3));
-        request.setAttribute("secondAuthorID", authorService.getAuthors().get(4));
-        request.setAttribute("secondTimeStamp", authorService.getAuthors().get(5));
         
-        request.setAttribute("thirdAuthorName", authorService.getAuthors().get(6));
-        request.setAttribute("thirdAuthorID", authorService.getAuthors().get(7));
-        request.setAttribute("thirdTimeStamp", authorService.getAuthors().get(8));
         
         
         RequestDispatcher view = 
